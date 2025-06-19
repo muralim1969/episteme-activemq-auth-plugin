@@ -1,0 +1,10 @@
+{
+  "jwt": {
+    "idps": {
+      "google": {
+        "issuer": "https://accounts.google.com",
+         "audience": ["test-audience"]
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "jwt": {
+    "idps": {
+      "valid-google": {
+        "issuer": "https://accounts.google.com",
+        "audience": ["my-app"]
+      },
+      "missing-issuer": {
+        "audience": ["my-app"]
+      },   
+      "empty-issuer": {
+        "issuer": "", 
+        "audience": ["my-app"]
+      }
+    }
+  }
+}

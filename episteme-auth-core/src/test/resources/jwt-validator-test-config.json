@@ -1,0 +1,10 @@
+{
+  "jwt": {
+    "idps": {
+      "test-issuer": {
+        "issuer": "https://test.example.com",
+         "audience": ["test-audience", "test-client"]
+      }
+    }
+  }
+}

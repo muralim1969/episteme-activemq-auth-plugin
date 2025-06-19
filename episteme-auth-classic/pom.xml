@@ -1,0 +1,67 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+ 
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.episteme.activemq</groupId>
+    <artifactId>episteme-activemq-auth</artifactId>
+    <version>1.0.0</version>
+  </parent>
+  <artifactId>episteme-auth-classic</artifactId>
+  <properties>
+		<!-- Java 17 -->
+		<maven.compiler.source>17</maven.compiler.source>
+		<maven.compiler.target>17</maven.compiler.target>
+		    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+	</properties>
+  <dependencies>
+  	<dependency>
+			<groupId>org.apache.activemq</groupId>
+			<artifactId>activemq-all</artifactId>
+			<version>6.1.6</version>
+	</dependency>
+	<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+			<version>1.3.5</version>
+	</dependency>
+	<dependency>
+		<groupId>org.episteme.activemq</groupId>
+		<artifactId>episteme-auth-core</artifactId>
+		<version>1.0.0</version>
+	</dependency>
+	<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter</artifactId>
+			<version>5.10.0</version>
+			<scope>test</scope>
+		</dependency>
+  </dependencies>
+  <dependencyManagement>
+  	<dependencies>
+  		<dependency>
+  			<groupId>org.episteme.activemq</groupId>
+  			<artifactId>episteme-auth-core</artifactId>
+  		</dependency>
+  		
+  		<!-- JUnit 5 -->
+		
+  	</dependencies>
+  </dependencyManagement>
+  
+  <build>
+		<plugins>
+			<!-- Maven Surefire Plugin for running JUnit 5 tests -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.1.2</version>
+				<configuration>
+					<includes>
+						<include>**/*Test.java</include>
+					</includes>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

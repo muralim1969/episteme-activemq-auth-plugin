@@ -1,0 +1,32 @@
+{
+"ipAcl":{
+  "allow": [
+    "192.168.1.10/32",
+    "10.0.0.42/32",
+    "172.16.5.5/32",
+	"172.16.0.0/12",
+	"192.168.1.101/32"
+  	]
+  },
+  "cert": {
+    "allowedThumbprints": [
+      "9EB8750B9759E0B06F2514FEC3C803D7237558DC",
+      "7FE87FF444651FD53D6E6781215AE602E405C08A"
+    ]
+  }, 
+  "pipelines": {
+      "connector-ip-cert-jwt": [
+        "IpAclValidator",
+        "ClientCertValidator",
+        "JwtValidator"
+      ],
+      "connector-cert-only": [
+        "ClientCertValidator"
+      ],
+      "connector-mobile-stomp": [
+        "ClientCertValidator",
+        "DeviceValidator",
+        "JwtValidator"
+      ]
+    }
+}

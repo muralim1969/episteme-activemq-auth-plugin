@@ -1,0 +1,35 @@
+{
+  "ipAcl": {
+    "allow": [
+      "192.168.1.0/24",
+      "10.0.0.5/32",
+      "172.16.0.0/12"
+    ]
+  },
+  "cert": {
+    "allowedThumbprints": [
+      "6F:AD:23:88:12:BB:AC:45:E3:90:66:D2:75:F7:92:D5:D9:E3:FA:44",
+	  "6FAD238812BBAC45E39066D275F792D5D9E3FA44",
+      "AABBCCDDEEFF001122334455667788990AABBCCD",
+	  "7FE87FF444651FD53D6E6781215AE602E405C08A"
+    ]
+  },
+  "jwt": {
+    "idps": {
+      "google": {
+        "issuer": "https://accounts.google.com",     
+        "audience": ["my-app-client-id"]
+      },
+      "auth0": {
+        "issuer": "https://example.auth0.com/",
+        "audience": 
+		 ["my-auth0-client","my-auth0-client-1"]
+      }
+    }
+  },
+  "pipelines": {
+      "connector-ip-cert-jwt": ["ip-acl-validator", "client-cert-validator", "jwt-validator"],
+      "stomp": ["client-cert-validator", "jwt-validator"],
+      "admin": ["ip-acl-validator"]
+    }
+}

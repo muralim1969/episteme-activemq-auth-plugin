@@ -1,0 +1,9 @@
+{
+  "cert": {
+    "allowedThumbprints": [
+      "6f:ad:23:88:12:bb:ac:45:e3:90:66:d2:75:f7:92:d5:d9:e3:fa:44",
+      "AA BB CC DD EE FF 00 11 22 33 44 55 66 77 88 99 0A AB BC CD",
+      "AABBCCDDEEFF001122334455667788990AABBCCD"
+    ]
+  }
+}

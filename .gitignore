@@ -22,3 +22,44 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+
+
+# Maven output
+target/
+!.mvn/wrapper/maven-wrapper.jar
+
+# IntelliJ / Eclipse / VSCode project files
+.idea/
+*.iml
+*.ipr
+*.iws
+*.log
+.vscode/
+.classpath
+.project
+.settings/
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Logs and local dev
+*.log
+*.swp
+*.swo
+
+# Java crash logs
+hs_err_pid*
+replay_pid*
+
+# Temporary files
+*.tmp
+*.bak
+
+# Build artifacts
+*.jar
+*.war
+*.ear
+
+# Test output
+surefire-reports/
