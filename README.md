@@ -61,9 +61,9 @@ Place this file inside ${ACTIVEMQ_BASE}/conf/. Here’s a sample:
   "jwt": {
     "idps": {
       "entra": {
-        "issuer": "https://login.microsoftonline.com/e9d1afc4-345555-4e39-beb3-1ea201a534df/v2.0",
+        "issuer": "https://login.microsoftonline.com/dd5d1afc4-345555-4e39-beb3-1ea201a534df/v2.0",
         "audience": [
-          "7c256992-af92-4231-234556-6505f139693a"
+          "7c256992-af92-4231-ert34556-6505f139693a"
         ]
       }
     }
